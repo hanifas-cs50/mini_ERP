@@ -17,15 +17,23 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} antialiased`}
-      >
-        <div className="flex max-w-screen-xl mx-auto bg-zinc-800 border-r-4 border-zinc-600">
-          <Sidebar />
-          <Navbar />
-          <div className="relative w-full min-h-screen ml-72 mt-16 flex flex-col">
-            {children}
+      <body className={`${geistSans.variable} antialiased`}>
+        <div className="flex max-w-screen-xl mx-auto bg-zinc-800 xl:border-r-4 border-zinc-600">
+
+          {/* <Sidebar /> */}
+
+          <nav className="fixed w-full max-w-screen-xl mx-auto z-50">
+            <div className="relative h-16 px-4 flex items-center justify-between bg-zinc-900 xl:border-r-4 border-zinc-600"> {/* ml-72 */}
+              <Navbar />
+            </div>
+          </nav>
+
+          <div className="relative w-full min-h-screen mt-16 flex flex-col"> {/* ml-72 */}
+            <div className="h-full p-6 font-[family-name:var(--font-geist-sans)]">
+              {children}
+            </div>
           </div>
+
         </div>
       </body>
     </html>

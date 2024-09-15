@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function Sidebar() {
   return (
-    <aside className="fixed w-72 min-h-screen flex flex-col bg-zinc-900 border-l-4 border-zinc-600">
+    <aside className="fixed w-72 min-h-screen flex flex-col bg-zinc-900 xl:border-l-4 border-zinc-600">
       <div className="h-16 px-4 flex items-center font-bold text-xl text-zinc-300 hover:text-white">
         MyMiniERP
       </div>
